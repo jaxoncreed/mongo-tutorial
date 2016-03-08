@@ -12,8 +12,14 @@ app.use(bodyParser.json());
 
 // Get an array of all candidates
 app.get('/candidates', function(req, res) {
-  // TODO: functionality
-  res.send('get all');
+  Candidate.find(function(err, candidates) {
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      res.send(candidates);
+    }
+  });
 });
 
 // Get candidate by id
