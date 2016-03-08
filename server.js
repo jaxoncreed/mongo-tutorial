@@ -62,8 +62,14 @@ app.post('/candidates', function(req, res) {
 
 // Update a candidate
 app.put('/candidates/:id', function(req, res) {
-  // TODO: functionality
-  res.send('update');
+  Candidate.update( { _id: req.params.id }, req.body, function(err) {
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      res.sendStatus(200);
+    }
+  });
 });
 
 // Remove a candidate
