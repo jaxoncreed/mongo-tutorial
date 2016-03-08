@@ -1,0 +1,66 @@
+/* Note: this has no effect on the actual application.
+It's simply here as a sample data source */
+
+{
+  "name": "Bernie Sanders",
+  "party": "Democrat",
+  "experience": {
+    "congress": true,
+    "localGovernment": true,
+    "businessOwner": false
+  },
+  "platform": [
+    "Wall Street is ruining the middle class",
+    "I'm sick and tired of hearing about your damn emails"
+  ]
+}
+{
+  "name": "Hillary Clinton",
+  "party": "Democrat",
+  "experience": {
+    "congress": true,
+    "localGovernment": false,
+    "businessOwner": false
+  },
+  "platform": [
+    "I'm Hillary Clinton"
+  ]
+}
+{
+  "name": "Gary Johnson",
+  "party": "Libertarian",
+  "experience": {
+    "congress": false,
+    "localGovernment": true,
+    "businessOwner": true
+  },
+  "platform": [
+    "Socially Tolerant, Fiscally Responsible",
+    "Notice me, Sempai"
+  ]
+}
+{
+  "name": "Marco Rubio",
+  "party": "Republican",
+  "experience": {
+    "congress": true,
+    "localGovernment": true,
+    "businessOwner": false
+  },
+  "platform": [
+    "You can't trust people with small hands"
+  ]
+}
+{
+  "name": "Donald Trump",
+  "party": "Republican",
+  "experience": {
+    "congress": false,
+    "localGovernment": false,
+    "businessOwner": true
+  },
+  "platform": [
+    "I'm very rich",
+    "I have the best words"
+  ]
+}
