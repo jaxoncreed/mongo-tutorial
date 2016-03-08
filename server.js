@@ -24,8 +24,14 @@ app.get('/candidates', function(req, res) {
 
 // Get candidate by id
 app.get('/candidates/:id', function(req, res) {
-  // TODO: functionality
-  res.send('get one');
+  Candidate.findById(req.params.id, function(err, candidate) {
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      res.send(candidate);
+    }
+  });
 });
 
 // Create a new candidate
