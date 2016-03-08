@@ -34,6 +34,18 @@ app.get('/candidates/:id', function(req, res) {
   });
 });
 
+// Get candidate by id
+app.get('/candidates/byparty/:party', function(req, res) {
+  Candidate.find({ party: req.params.party }, function(err, candidate) {
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      res.send(candidate);
+    }
+  });
+});
+
 // Create a new candidate
 app.post('/candidates', function(req, res) {
   console.log(req.body);
