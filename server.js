@@ -74,8 +74,14 @@ app.put('/candidates/:id', function(req, res) {
 
 // Remove a candidate
 app.delete('/candidates/:id', function(req, res) {
-  // TODO: functionality
-  res.send('remove');
+  Candidate.find({ _id: req.params.id }).remove(function(err) {
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      res.sendStatus(200);
+    }
+  });
 });
 
 // Start the server
